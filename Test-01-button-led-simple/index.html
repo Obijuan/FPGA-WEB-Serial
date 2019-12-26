@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <title>FPGA WEB Serial test 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>FPGA WEB Serial. Test 1</h1>
+    </header>
+    <main class="main">
+      <div id="notSupported">
+        Este navegador NO soporta <b>Web Serial</b>. Asegúrate que estás usando
+        Chrome/Chromium 78 o superior y que está habilitado el flag
+        <code>#enable-experimental-web-platform-features</code> en
+        <code>chrome://flags</code>
+      </div>
+      <br>
+      <button id="butConnect" type="button" disabled>🔌Conectar</button>
+      <br>
+      <p>Cambiar estado LED0</p>
+      <input disabled class="led" type="checkbox" id="led0">
+      <p>Estado del botón</p>
+      <pre id="Button1"></pre>
+    </main>
+  </body>
+</html>

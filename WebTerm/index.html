@@ -13,7 +13,7 @@
   <body>
 
     <!-- Barra superior -->
-    <div class="w3-container w3-light-blue w3-margin-top">
+    <div class="w3-container w3-indigo w3-round-xlarge w3-margin-left w3-margin-right">
       <h4>WEB Serial Terminal</h4>
     </div>
 
@@ -37,14 +37,10 @@
 
     <div class="w3-container w3-margin" id="terminal_container" hidden>
       <div id="terminal"></div>
-      <button id="butConnect" type="button" disabled>🔌Conectar</button>
-      <button type="button" id="clear" disabled>🧽 Limpiar terminal</button>
-    </div>
-
-    <!-- Barra inferior -->
-
-    <div class="w3-container w3-light-blue">
-       Github: xxxx
+      <div class="w3-bar">
+        <button class="w3-bar-item w3-button w3-green" id="butConnect" type="button"  disabled>🔌Conectar</button>
+        <button class="w3-bar-item w3-button w3-blue" type="button" id="clear"  disabled>🧽 Limpiar terminal</button>
+      </div>
     </div>
 
   </body>

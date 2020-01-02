@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <title>WEBTerm 0.1</title>
+    <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="node_modules/xterm/lib/xterm.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="header">
+      <h1>WEB Serial Terminal</h1>
+    </header>
+
+    <main class="main">
+    <div id="notSupported">
+      Este navegador NO soporta <b>Web Serial</b>. Asegúrate que estás usando
+      Chrome/Chromium 78 o superior y que está habilitado el flag
+      <code>#enable-experimental-web-platform-features</code> en
+      <code>chrome://flags</code>
+      <br>
+      Para habilitarulo en Chrome/Chromium copia esta URL en una nueva pestaña:
+      <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a>
+      y pincha en ENABLE
+    </div>
+
+    <div id="terminal"></div>
+      <br>
+      <button id="butConnect" type="button" disabled>🔌Conectar</button>
+      <button type="button" id="clear" disabled>🧽 Limpiar terminal</button>
+    </main>
+  </body>
+</html>

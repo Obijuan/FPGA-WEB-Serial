@@ -171,11 +171,12 @@ async function readLoop() {
 
     //-- Hay un valor correcto: Mostrarlo en la gui
     if (value) {
-      console.log("[RCV] ", value);
-
-      //-- Convertir \n into \n\r
-      let value2 = value.replace('\n','\r\n');
+      //-- Convertir \n en \n\r
+      let value2 = value.replace(/(?:\\[n]|[\n])/g,"\n\r")
       term.write(value2);
+      console.log("Value2: ", value2)
+      console.log("Len:",value2.length)
+
     }
 
     //-- El stream se ha eliminado

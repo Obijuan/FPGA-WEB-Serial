@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
     <title>WEBTerm 0.1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="node_modules/xterm/css/xterm.css" />
-    <link rel="stylesheet" href="style.css" />
     <script src="node_modules/xterm/lib/xterm.js"></script>
     <script src="main.js" defer></script>
   </head>
 
   <body>
 
-    <header class="header">
-      <h1>WEB Serial Terminal</h1>
-    </header>
-
-    <main class="main">
-    <div id="notSupported">
-      Este navegador NO soporta <b>Web Serial</b>. Asegúrate que estás usando
-      Chrome/Chromium 78 o superior y que está habilitado el flag
-      <code>#enable-experimental-web-platform-features</code> en
-      <code>chrome://flags</code>
-      <br>
-      Para habilitarulo en Chrome/Chromium copia esta URL en una nueva pestaña:
-      <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a>
-      y pincha en ENABLE
+    <!-- Barra superior -->
+    <div class="w3-container w3-light-blue w3-margin-top">
+      <h4>WEB Serial Terminal</h4>
     </div>
 
-    <div id="terminal"></div>
-      <br>
+    <!-- Mensaje de error qeue se muestra si el navegador
+         no tiene web-serial
+     -->
+    <div class="w3-panel w3-red w3-round-xlarge w3-border w3-margin-left w3-margin-right" id="display_err_not_serial">
+      <h3>Warning!</h3>
+      <p>Este navegador NO soporta <b>Web Serial</b></p>
+      <p>Asegúrate que estás usando
+      Chrome/Chromium 78 o superior
+        y que está habilitado el flag
+      <code>#enable-experimental-web-platform-features</code> en
+      <code>chrome://flags</code></p>
+      <p>Para habilitarlo en Chrome/Chromium copia esta URL en una nueva pestaña:
+      <a href="chrome://flags/#enable-experimental-web-platform-features">chrome://flags/#enable-experimental-web-platform-features</a>
+      y pincha en ENABLE</p>
+    </div>
+
+    <!-- Terminal y botones -->
+
+    <div class="w3-container w3-margin" id="terminal_container" hidden>
+      <div id="terminal"></div>
       <button id="butConnect" type="button" disabled>🔌Conectar</button>
       <button type="button" id="clear" disabled>🧽 Limpiar terminal</button>
-    </main>
+    </div>
+
+    <!-- Barra inferior -->
+
+    <div class="w3-container w3-light-blue">
+       Github: xxxx
+    </div>
+
   </body>
 </html>

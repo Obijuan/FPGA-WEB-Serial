@@ -13,15 +13,19 @@ let outputDone;
 //-- Stream de entrada
 let inputStream;
 
+//-- Mensaje de error: Puerto serie no soportado
+const notSupported = document.getElementById('display_err_not_serial');
+
 //-- Botón de conexion al puerto serie
 const butConnect = document.getElementById('butConnect');
 const butClear = document.getElementById('clear');
 
 //-- Terminal
 const terminal = document.getElementById('terminal');
+const terminal_container = document.getElementById('terminal_container')
 
-let term = new Terminal();
-term.open(terminal);
+
+let term;
 
 
 
@@ -37,11 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('serial' in navigator) {
 
     //-- Mantener oculto el mensaje de error
-    const notSupported = document.getElementById('notSupported');
-    notSupported.classList.add('hidden');
+    notSupported.hidden = true
 
     //-- Activar el boton de conectar
     butConnect.disabled = false;
+
+    //-- Mostrar el terminal
+    terminal_container.hidden = false;
+
+    //-- Abrir terminal
+    term = new Terminal();
+    term.open(terminal);
+
 
   }
 });

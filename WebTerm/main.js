@@ -116,7 +116,7 @@ async function connect() {
   port = await navigator.serial.requestPort();
 
   // - Abrir el puerto serie. Se espera hasta que este abierto
-  await port.open({ baudrate: 115200 });
+  await port.open({ baudRate: 115200 });
 
   //-- Configurar el stream de salida
   //-- Es outputStream. Antes se pasa por un codificador de texto
